@@ -6,7 +6,6 @@
 document.querySelectorAll('[data-hd]').forEach((el) => {
   const color = el.getAttribute('data-hd-color') || false;
   const type = el.getAttribute('data-hd-type') || false;
-  console.log('el');
 
   switch (type) {
 
@@ -124,7 +123,7 @@ function typeLight(el, color) {
     box-shadow: 0px 0px 105px 45px ${color};
   `
   el.style.position = 'relative';
-  el.innerHTML = <span style="z-index: 1;">${el.innerHTML}</span> + light;
+  el.innerHTML = `<span style="z-index: 1;">${el.innerHTML}</span>` + light;
 }
 
 /**
@@ -141,7 +140,7 @@ function typeShape(el, color) {
   `;
 
   el.style.position = 'relative';
-  el.innerHTML = <span style="z-index: 1;">${el.innerHTML}</span> + shapeHtml;
+  el.innerHTML = `<span style="z-index: 1;">${el.innerHTML}</span>` + shapeHtml;
 }
 
 /**

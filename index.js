@@ -228,7 +228,7 @@ function typeWaves(el, color) {
  */
 function typeArrowToRight(el, color) {
   const svg = `
-                    <svg class="w-10 h-10" viewBox="0 0 162 119" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 40%; top: 50%; left: -110%">
+                    <svg class="w-10 h-10" viewBox="0 0 162 119" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 40%; top: 50%; left: -50%">
                     <svg class="w-10 h-10" viewBox="0 0 110 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.734436 32.0433C28.1185 20.8631 58.321 14.4162 87.6991 11.2271C93.6909 10.5767 99.7856 10.1329 105.681 8.82643C106.565 8.6305 107.666 8.45126 108.257 7.71167" stroke="${color}" stroke-width="2" stroke-linecap="round"></path>
                       <path d="M105.295 7.55369C103.251 6.41332 98.0697 4.73081 97.3989 2.01718C97.3762 1.92544 97.3095 1.31771 97.3374 1.37859C98.1737 3.20315 97.6004 7.32036 97.4208 9.32238C97.3735 9.84973 96.396 15.3811 96.8612 15.1485C101.235 12.9619 105.361 8.83254 109.442 6.05271" stroke="${color}" stroke-width="2" stroke-linecap="round"></path>
@@ -245,7 +245,7 @@ function typeArrowToRight(el, color) {
  */
 function typeArrowToTop(el, color) {
   const svg = `
-                    <svg class="w-10 h-10" viewBox="0 0 77 85" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; height: 100%; top: 110%; left: 0">
+                    <svg class="w-10 h-10" viewBox="0 0 77 85" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; height: 100%; top: 100%; left: 0">
                       <path d="M1.33755 84.3973C0.297616 62.7119 2.93494 39.8181 19.4192 23.8736C28.2211 15.3599 42.4944 12.5723 47.6281 26.2359C51.1245 35.5419 51.542 51.9945 41.0605 57.0865C29.486 62.7095 40.2945 35.2221 41.9942 32.4952C49.9497 19.7313 59.7772 11.6122 72.2699 3.78281C76.9496 0.849879 73.7108 0.477284 70.0947 1.13476C66.9572 1.7052 63.4035 2.43717 60.5291 3.81975C59.6524 4.24143 65.7349 2.73236 66.6827 2.44768C70.7471 1.22705 75.4874 -0.0219285 75.9527 5.60812C76.0274 6.5127 75.9956 14.9844 74.7481 15.2963C74.099 15.4586 71.0438 10.27 70.4642 9.65288C66.6996 5.64506 63.5835 4.42393 58.2726 5.11792" stroke="${color}" stroke-width="2" stroke-linecap="round"></path>
                     </svg> 
                   `
@@ -261,16 +261,4 @@ function typeArrowToTop(el, color) {
 function appendSvg(svg, el) {
   el.style.position = 'relative';
   el.innerHTML += svg;
-}
-
-/**
- * Add a background image to the text
- * @param {HTMLElement} el - The element to be decorated
- * @param {string|boolean} color - The color of the svg
- * * @returns {void}
- */
-function backgroundSvg(svg, el) {
-  el.style.backgroundImage = `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
-  elemento.style.backgroundSize = "cover";
-  el.style.backgroundPosition = "center";
 }
